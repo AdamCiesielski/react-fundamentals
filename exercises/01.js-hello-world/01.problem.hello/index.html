@@ -1,5 +1,19 @@
 <!-- 🐨 Create (in HTML) an <html> with a <body> with a <div> with the id of "root" -->
+    <html>
+        <body>
+            <div id="root"></div>
+            <script type="module">
+                const rootDiv = document.getElementById('root')
 
+                const newDiv = document.createElement("div");
+                newDiv.className="container"
+                newDiv.textContent="Hello World"
+
+                rootDiv.append(newDiv)
+
+            </script>
+        </body>
+    </html>
 <!-- 🐨 Then create a <script type="module"> for your JavaScript -->
 <!--	 📜 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attributes -->
 <!--	 📜 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules -->
