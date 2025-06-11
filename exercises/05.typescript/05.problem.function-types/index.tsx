@@ -7,12 +7,16 @@ import { createRoot } from 'react-dom/client'
 // circular dependency here
 
 // 🦺 cast the operations variable to a Record of the Operator type and the OperationFn type
-const operations = {
+type Operator = '+' | '-' | '*' | '/'
+
+type OperationFn = (left:number, right:number) => number
+
+const operations: Record<Operator, OperationFn > = {
 	// 🦺 remove all the ": number" from these functions
-	'+': (left: number, right: number): number => left + right,
-	'-': (left: number, right: number): number => left - right,
-	'*': (left: number, right: number): number => left * right,
-	'/': (left: number, right: number): number => left / right,
+	'+': (left, right) => left + right,
+	'-': (left, right) => left - right,
+	'*': (left, right) => left * right,
+	'/': (left, right) => left / right,
 }
 
 type CalculatorProps = {

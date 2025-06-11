@@ -7,14 +7,15 @@ const operations = {
 	'/': (left: number, right: number): number => left / right,
 }
 
+type operators = '+' | '-' | '*' | '/'
+
 type CalculatorProps = {
 	left: number
 	// 🦺 limit the operator to be only +, -, *, or /
-	operator: string
+	operator: operators
 	right: number
 }
 function Calculator({ left, operator, right }: CalculatorProps) {
-	// @ts-expect-error 💣 when you finish, remove this comment.
 	const result = operations[operator](left, right)
 	return (
 		<div>
