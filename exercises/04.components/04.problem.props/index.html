@@ -8,20 +8,24 @@
 
 			const rootElement = document.getElementById('root')
 
-			const operations = {
-				'+': (left, right) => left + right,
-				'-': (left, right) => left - right,
-				'*': (left, right) => left * right,
-				'/': (left, right) => left / right,
-			}
+			// const operations = {
+			// 	'+': (left, right) => left + right,
+			// 	'-': (left, right) => left - right,
+			// 	'*': (left, right) => left * right,
+			// 	'/': (left, right) => left / right,
+			// }
 
 			// 🐨 accept the right props in the Calculator component here
-			function Calculator() {
+			function Calculator({operator, left, right}) {
 				// 💰 you can get the result with: operations[operator](left, right)
+				const operation = `${left} ${operator} ${right}`
 				return (
 					<div>
 						{/* 🐨 render the equation and its result here */}
 						{/* 💰 open the final version in the app if you're unsure */}
+						<code>
+							{operation} = <output>{eval(operation)}</output>
+						</code>
 					</div>
 				)
 			}
