@@ -7,7 +7,15 @@ function App() {
 	//   🐨 render a button
 	// 💯 associate the label to the input using htmlFor and id attributes
 	// 💯 explicitly set the button type appropriately
-	return 'TODO'
+	return (
+		<form>
+			<div>
+				<label htmlFor="usernameInput">Username:</label>
+				<input id="usernameInput" name="username"></input>
+			</div>
+			<button type="submit">submit</button>
+		</form>
+	)
 }
 
 const rootEl = document.createElement('div')

@@ -11,6 +11,13 @@ function App() {
 			// 4️⃣ 🐨 create a FormData object from the form (💰 event.currentTarget)
 			// 5️⃣ 🐨 log the result of Object.fromEntries(formData)
 			// 6️⃣ 💯 as extra credit, see what happens if you remove the action, method, and encType
+			method="POST"
+			encType="multipart/form-data"
+			onSubmit={(event) => {
+				event.preventDefault()
+				const formData = new FormData(event.currentTarget)
+				console.log(Object.fromEntries(formData))
+			}}
 		>
 			<div>
 				<label htmlFor="usernameInput">Username:</label>
