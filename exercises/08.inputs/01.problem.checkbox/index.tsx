@@ -26,6 +26,12 @@ function App() {
 				<label htmlFor="colorInput">Favorite Color:</label>
 				<input id="colorInput" name="color" type="color" />
 			</div>
+			<div>
+				<label>
+					<input name="waiver" type="checkbox" />
+					Waiver Signed
+				</label>
+			</div>
 			{/* 🐨 add a checkbox named "waiver" with the label "Waiver Signed" */}
 			{/* 💰 put the <input> inside the <label> */}
 			<div>
